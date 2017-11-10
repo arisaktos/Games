@@ -4,13 +4,11 @@ function setup() {
 gameScene = new Container();
 stage.addChild(gameScene);
 
-
     
   //Create the `paddle1` sprite 
   paddle1 = new Sprite(resources["images/paddle.png"].texture);
   paddle1.y = 96; 
     paddle1.x = 2;
-  paddle1.vx = 0;
   paddle1.vy = 0;
     
   gameScene.addChild(paddle1);
@@ -27,7 +25,7 @@ paddle2.x = paddle2MaxWidth;
 ball = new Sprite(resources["images/ball.png"].texture);
     ball.y = 61;
     ball.x = paddle1.width;
-    ball.vx = 4;
+    ball.vx = 6;
     ball.vy = 4;
     gameScene.addChild(ball);
     

@@ -1,4 +1,5 @@
 
+
    var Container = PIXI.Container,
        autoDetectRenderer = PIXI.autoDetectRenderer,
        loader = PIXI.loader,
@@ -6,6 +7,7 @@
        Sprite = PIXI.Sprite;
     Graphics = PIXI.Graphics;
 Text = PIXI.Text;
+Timer = PIXI.Timer;
 
    var type = "WebGL"
    if (!PIXI.utils.isWebGLSupported()) {

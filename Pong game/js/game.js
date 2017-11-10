@@ -1,13 +1,15 @@
-
+var timer = 0;
+var newBallValue = 6;
+var numberOfHits = 6;
 
 function gameLoop(){
   //Loop this function 60 times per second
   requestAnimationFrame(gameLoop);
   //Update the current game state
   state();
-    
+timer++;
     //paddle2 movement + containment 
-    paddle2.y += paddle2.vy;
+    paddle2.y += ball.vy;
     var paddle2HitsBottom = contain(paddle2, {x: paddle2MaxWidth, y: 61, width: maxWidth, height: maxHeight});
     if (paddle2HitsBottom === "bottom" || paddle2HitsBottom === "top") {
         //if paddle hits top or bottom move it oposite direction
@@ -21,32 +23,52 @@ function gameLoop(){
     if (ballHitsBottom === "bottom" || ballHitsBottom === "top") {
   ball.vy *= -1;
 
+  
+
 }
-      paddle1.x += paddle1.vx;
+  
   paddle1.y += paddle1.vy
   contain(paddle1, {x: paddle1.x, y: 61, width: maxWidth, height: maxHeight});    
  
-
-  //Render the stage
+                                                                                                                                                                                                                                                                     
   renderer.render(stage);
+    
+
+    //do something every 10sec
+   if (timer%600 === 1)
+        {
+//             newBallValue++
+//       ball.vx = newBallValue;
+      //                                              console.log('speedup' + ball.vx);
+        }
+    
 }
 function play() {
 
     
     if (hitTestRectangle(ball, paddle2)) {
 ball.vx *= -1;
- 
+
   } 
     
        if (hitTestRectangle(ball, paddle1)) {
 ball.vx *= -1;
  points++
         pointsMsg.text = "Points: " +points;
+           
+            numberOfHits++;
+   if(numberOfHits%2 === 0)
+       {
+           newBallValue +=2;
+           ball.vx = newBallValue;
+           
+       }
+           
   } 
     //if ball goes out of boundaries
     if(ball.x < 0 || ball.x > maxWidth-30)
         {
-        
+       
             state = end;
         }
     
@@ -54,7 +76,7 @@ ball.vx *= -1;
 }
 
 function end() {
-  gameScene.visible = false;
+  gameScene.visible = false;                                                             
  createGameOverScene();
      
     
