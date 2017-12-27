@@ -14,27 +14,11 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
-text-align: center;
-        display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-
-
-
-.game-container {
-    width: 100%;
-    overflow: hidden;
+    text-align: center;
     display: flex;
     align-items: center;
-
     justify-content: center;
-  
 }
-
 
 
 .game-rules-copy {
@@ -42,9 +26,8 @@ text-align: center;
     margin: auto;
 }
 
-.memory-game h4 {
+.game-main-stage-box h4 {
     font-weight: normal;
-    
     font-size: 1.3rem;
     margin: 0;
 }
@@ -54,17 +37,19 @@ text-align: center;
 .play-button {
     padding: 10px 30px 10px 30px;
     background-color: transparent;
-    border: 1px solid #F84018;
-    color: #F84018;
+    border: 1px solid #041b45;
+    color: #041b45;
     margin-top: 20px;
-    border-radius: 35px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
+    transform: scale(1);
 }
 
 .play-button:hover {
-    background-color: #F84018;
+    background-color: #041b45;
     color: #fff;
+    transform: scale(1.1);
 }
 
 .play-button i {
@@ -73,41 +58,11 @@ text-align: center;
 
 
 .game-main-stage-box {
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    border-radius: 6px;
+    border-radius: 5px;
     margin-top: 30px;
-}
-
- opacity: 0.5;
-}
-
-#final-stage p {
-    font-size: 1rem;
-}
-
-#final-stage h3 {
-    font-size: 2rem;
-    color: white;
-    margin-top:30px;
-}
-
-#final-stage .total-points-gained{
-    font-size: 1.5rem;
-}
-
-
-
-#memory-game {
-    margin: auto;
-}
-
-.memory-game {
-    background-image: url('/images/default-source/games/memory-game.png');
-    background-size: contain;
-    background-color: #b7d1cf;
+    background-color: azure;
+    padding: 50px;
+    width: 50%;
 
 }
 
@@ -116,12 +71,12 @@ text-align: center;
 #game {
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 200;
     background-color: #000;
     height: 100%;
     color: #fff;
     width: 100%;
+
     display: none;
 
 }
@@ -166,24 +121,10 @@ text-align: center;
 
 
 
-@media all and (max-width: 880px) {
-
-
-    .game-inner-wrapper {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-
-
-    #gameSummaryBox {
-        font-size: 2rem;
-    }
-
-
-
+#memory-game {
+    max-width: 900px;
+    margin: 30px auto;
 }
-
 
 
 
@@ -229,6 +170,12 @@ text-align: center;
 }
 
 @media all and (max-width: 880px) {
+
+
+    .game-main-stage-box {
+        width: 90%;
+    }
+
     #memory-game {
         width: 100%;
 
@@ -245,5 +192,12 @@ text-align: center;
     }
 
 
-}
 
+
+
+    #gameSummaryBox {
+        font-size: 2rem;
+    }
+
+
+}
