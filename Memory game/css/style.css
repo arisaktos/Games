@@ -155,9 +155,9 @@ body {
     width: 100%;
     z-index: 30;
     left: 0;
-    background: url('../img/card-back-memory-game-smaller.png');
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: #122a81;
+    border: 1px solid #203997;
     background-position: center;
 
 }
