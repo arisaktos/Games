@@ -1,0 +1,268 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+canvas{
+    border-bottom: 4px solid #F84018;
+    background-color: #fff;
+}
+
+body {
+    font-family: arial;
+    color: #ffffff;
+    background-color: #074d84;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+#final-stage{
+    text-align: center;
+    color: #fff;
+}
+
+.play-btn
+{
+      border: none;
+    font-size: 1.2rem;
+    padding: 20px 40px;
+       border-radius: 35px;
+    transition: all 0.5s;
+    background-color: #E5E1DA;
+    cursor: pointer;
+}
+
+.play-btn:hover
+{
+   background-color: #F84018;
+}
+
+
+.game-container
+{    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+    padding: 30px 0px 30px 0px;
+    justify-content: center;
+    text-align: center;}
+
+
+
+.game-rules-copy
+{
+    width: 90%;
+    margin: auto;
+}
+
+h4
+{
+        font-weight: normal;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.play-button
+{      padding: 10px 30px 10px 30px;
+    background-color: transparent;
+    border: 1px solid #c1daee;
+    color: #c1daee;
+    margin-top:20px;
+    border-radius: 10px;
+cursor: pointer;
+    font-size: 2rem;
+transition: all 0.5s;
+}
+
+.play-button:hover
+{
+    background-color:#c1daee;
+    color: #074d84;
+}
+
+.play-button i
+{padding-left: 10px;}
+
+
+.game-main-stage-box {
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 6px;
+}
+.active 
+{width: 30%;
+height: 420px;
+    -webkit-box-shadow: -1px 0px 22px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 22px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 22px 0px rgba(0,0,0,0.75);
+        z-index: 10;
+}
+
+.inactive
+{
+   width: 25%;
+    height: 340px;
+    opacity: 0.5;
+}
+
+
+.quiz-game {
+    background-image: url('../img/quiz-game.png');
+    background-size: contain;
+    background-color: #e5e1da;
+}
+
+.memory-game {
+    background-image: url('../img/memory-game.png');
+    background-size: contain;
+    background-color: #b7d1cf;
+}
+
+
+
+.item-mask {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    height: 100%;
+    opacity: 0;
+    padding: 5px;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.item-mask-inner {
+    border: 1px solid #fff;
+    position: relative;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.item-mask-inner-copy {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+.game-main-stage-box:hover .item-mask {
+    opacity: 1;
+}
+
+#game{
+        position: absolute;
+    top: 0;
+    left: 0;
+   z-index: 200;
+    background-color: #000;
+        height: 100vh;
+        color: #fff;
+    width: 100%;
+        padding: 30px;
+    display: none;
+    
+}
+
+
+
+#gameSummaryBox
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+        position: absolute;
+    width: 100%;
+        text-align: center;
+    background-color: #000;
+    z-index: 210;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        font-size: 3rem;
+}
+
+.showPointsAnim{
+    opacity: 0;
+    animation: showPointsAnimation 3s 1;
+}
+
+
+.total-points{
+    font-size: 1.17em;
+    font-weight: bold;
+        display: inline;
+        margin: 0px 20px;
+    padding: 0;
+    float: right;
+        line-height: 80px;
+}
+
+
+
+@keyframes showPointsAnimation {
+  0%   { opacity: 0; }
+  50% { opacity: 1; }
+     100% { opacity: 0; }
+}
+
+#total-game-points-box
+{display: inline-block;}
+
+#game-top-panel
+{
+    color: #000;
+    background-color:#14354e ;
+    font-size: 1.2rem;
+    height: 80px;
+}
+
+.game-inner-wrapper
+{margin-left: 10%;
+    margin-right: 10%;
+    height: inherit;
+    position: relative;
+}
+
+.game-inner-wrapper img
+{position: absolute;
+    top: 50%;
+    transform: translateY(-50%);}
+
+#startPong
+{    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    padding: 30px;}
+
+#startPongBtn
+{
+      font-weight: bold;
+    font-size: 2rem;
+    height: 100px;
+    width: 300px;
+}
+
+
+@media all and (max-width: 880px) {
+
+.active, .inactive
+    {width: 100%;}
+    
+    .game-container{
+        flex-direction: column;
+    }
+    
+    .quiz-game, .memory-game, .pong-game {
+        background-position: left;
+    }
+
+}

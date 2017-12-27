@@ -1,0 +1,80 @@
+#question-game form
+{
+  margin-bottom: 30px;
+}
+
+#question-game h3
+{
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+
+
+#questions-submit
+{
+  width: 200px;
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  background-color: orangered;
+  transition: all 0.7s;
+  color:#fff;
+  text-transform: uppercase;
+   margin-top: 15px;
+}
+
+#questions-submit:hover
+{
+  background-color: orange;
+  cursor: pointer;
+}
+
+.radio:hover .label {
+  color: #F84018;
+}
+
+.radio:hover .label::before {
+  border: 5px solid #F84018;
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + .label {
+  color: #F84018;
+}
+input[type="radio"]:checked + .label::before {
+  border: 5px solid #F84018;
+  background: #fff;
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+     padding: 0.4rem 0;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.label::before {
+  display: block;
+  height: 1.125rem;
+  width: 1.125rem;
+  margin-right: 0.625rem;
+  content: "";
+  border: 5px solid #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}

@@ -1,0 +1,249 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    font-family: Arial;
+    color: #291f1a;
+    background-color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+text-align: center;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+.game-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+  
+}
+
+
+
+.game-rules-copy {
+    width: 90%;
+    margin: auto;
+}
+
+.memory-game h4 {
+    font-weight: normal;
+    
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+
+
+.play-button {
+    padding: 10px 30px 10px 30px;
+    background-color: transparent;
+    border: 1px solid #F84018;
+    color: #F84018;
+    margin-top: 20px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.play-button:hover {
+    background-color: #F84018;
+    color: #fff;
+}
+
+.play-button i {
+    padding-left: 10px;
+}
+
+
+.game-main-stage-box {
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+ opacity: 0.5;
+}
+
+#final-stage p {
+    font-size: 1rem;
+}
+
+#final-stage h3 {
+    font-size: 2rem;
+    color: white;
+    margin-top:30px;
+}
+
+#final-stage .total-points-gained{
+    font-size: 1.5rem;
+}
+
+
+
+#memory-game {
+    margin: auto;
+}
+
+.memory-game {
+    background-image: url('/images/default-source/games/memory-game.png');
+    background-size: contain;
+    background-color: #b7d1cf;
+
+}
+
+
+
+#game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: #000;
+    height: 100%;
+    color: #fff;
+    width: 100%;
+    display: none;
+
+}
+
+
+
+#gameSummaryBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    z-index: 210;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.showPointsAnim {
+    opacity: 0;
+    animation: showPointsAnimation 3s 1;
+}
+
+
+
+
+@keyframes showPointsAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+@media all and (max-width: 880px) {
+
+
+    .game-inner-wrapper {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+
+
+    #gameSummaryBox {
+        font-size: 2rem;
+    }
+
+
+
+}
+
+
+
+
+#memory-game .memory-card {
+    width: 33%;
+    height: 300px;
+    position: relative;
+    margin: 0px;
+    float: left;
+    cursor: pointer;
+
+}
+
+#memory-game .memory-card .card-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+
+}
+
+#memory-game .memory-card .card-back {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+    left: 0;
+    background: url('../img/card-back-memory-game-smaller.png');
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+
+}
+
+
+#memory-game .memory-card .card-front img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media all and (max-width: 880px) {
+    #memory-game {
+        width: 100%;
+
+    }
+
+    #memory-game .memory-card {
+        width: 50%;
+        height: 200px;
+    }
+
+    #memory-game .memory-card .card-front img {
+        max-width: 100%;
+        height: 200px;
+    }
+
+
+}
+
