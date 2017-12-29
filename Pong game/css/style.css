@@ -1,0 +1,189 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial;
+    color: #291f1a;
+    background-color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button {
+    padding: 10px 30px 10px 30px;
+    background-color: transparent;
+    border: 1px solid #811099;
+    color: #811099;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+
+.play-button:hover {
+    background-color: #811099;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.play-button i {
+    padding-left: 10px;
+}
+
+
+.game-main-stage-box {
+    border-radius: 5px;
+    margin-top: 30px;
+    background-color: azure;
+    padding: 50px;
+    width: 60%;
+
+}
+
+#game {
+    position: absolute;
+    top: 0;
+    z-index: 200;
+    background-color: #000;
+    height: 100%;
+    color: #fff;
+    width: 100%;
+
+    display: none;
+
+}
+
+
+
+#gameSummaryBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    z-index: 210;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.showPointsAnim {
+    opacity: 0;
+    animation: showPointsAnimation 3s 1;
+}
+
+
+
+
+@keyframes showPointsAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.round2msg {
+    font-size: 2.3rem;
+    position: relative;
+    top: -50%;
+    text-align: center;
+    color: #811099;
+    text-transform: uppercase;
+    z-index: 99;
+    opacity: 0;
+    animation: showMsg 2s 1;
+}
+
+@keyframes showMsg {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.5);
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.get-ready-pong-copy
+{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#startPong {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 30px;
+}
+
+#startPongBtn {
+    background-color: #ec15c1;
+    font-size: 1.7rem;
+    color: white;
+    height: 80px;
+    border: 0px;
+    border-radius: 45px;
+    width: 250px;
+    transform: scale(1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+#startPongBtn:hover{
+    transform: scale(1.1);
+}
+
+@media all and (max-width: 880px) {
+
+    .game-main-stage-box {
+        width: 90%;
+    }
+
+    #gameSummaryBox {
+        font-size: 2rem;
+    }
+    
+     .round2msg {
+        font-size: 1.3rem;
+
+    }
+
+}
+
+
+
