@@ -7,3 +7,5 @@ Crossword - preview https://codepen.io/arisusaktos/pen/XzKXeJ
 Quiz - preview https://codepen.io/arisusaktos/pen/VyPJRv
 
 Pong - classic pong game made using PixiJS library
+
+Word Game - preview https://codepen.io/arisusaktos/pen/zmaOEX 
