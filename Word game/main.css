@@ -1,0 +1,149 @@
+body {
+    font-family: arial;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+
+.game-rules-copy {
+    max-width: 700px;
+    margin: auto;
+}
+
+.play-button {
+    color: #fff;
+    background-color: #092667;
+    cursor: pointer;
+    margin-bottom: 30px;
+    border: none;
+    margin-left: 20px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.hint {
+    background-color: #ebedf9;
+    padding: 10px 0px;
+}
+
+.play-button:hover {
+    background-color: #274790;
+}
+
+#inputLetter {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid #092667;
+}
+
+
+#gameTip {
+    background-color: #006b63;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+    line-height: 50px;
+}
+
+#guessingBoxes {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.top-panel-game {
+    background-color: #000;
+    width: 100%;
+    height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.wrongLetterAnim {
+    -webkit-animation: flashRed 1s 1;
+    animation: flashRed 1s 1;
+}
+
+@-webkit-keyframes flashRed {
+    0% {
+        color: black;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    50% {
+        color: red;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+    100% {
+        color: black;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes flashRed {
+    0% {
+        color: black;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    50% {
+        color: red;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+    100% {
+        color: black;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.game-main-stage-box {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#wordGame {
+    text-align: center;
+}
+
+
+
+#wrongLetterBox {
+    margin: auto;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+
+
+@media all and (max-width: 350px) {
+
+    #guessingBoxes {
+        font-size: 2rem;
+    }
+
+    .play-button {
+        margin-top: 30px;
+    }
+
+}

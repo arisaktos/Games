@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="game-main-stage-box">
+        <h2>Welcome to the Word Game!</h2>
+        <p class="game-rules-copy">Use the below hint to guess our hidden word. Enter a letter in the 'your letter' field and check if it appears in the hidden word. Beware, you can only enter 6 wrong letters! Good luck.</p>
+        <p class="hint"><strong>HINT:</strong> <span id="tipCopy">&nbsp;</span></p>
+    </div>
+    <div id="wordGame">
+        <p id="guessingBoxes">&nbsp;</p>
+        <form id="word-game-form" name="form">Your letter: <input id="inputLetter" maxlength="1" name="inputLetter" type="text" /><input class="play-button" id="guessBtn" name="guessBtn" type="button" value="CHECK LETTER" /></form>
+        <p id="wrongLetterBox">Wrong Letters (<span id="wrongLetterNum"></span>/6):</p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
